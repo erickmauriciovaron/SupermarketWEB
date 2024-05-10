@@ -12,7 +12,7 @@ namespace SupermarketWEB.Models
         [Column(TypeName = "decimal(6.2)")]
         public decimal Price { get; set; }
         public int Stock {  get; set; }
-        public int CategoruId { get; set; }//Será la llave foranea
+        public int CategoryId { get; set; }//Será la llave foranea
         public Category Category { get; set; } // Propiedad de navegación 
 
     }
