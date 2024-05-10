@@ -11,7 +11,7 @@ namespace SupermarketWEB.Pages.Categories
         private readonly SupermarketContext _context;
         public CreateModel(SupermarketContext context)
         {
-        _context = context;
+            _context = context;
         }
 
         public IActionResult OnGet()
