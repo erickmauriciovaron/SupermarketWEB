@@ -32,6 +32,10 @@
                     @Html.DisplayFor(modelItem => item.Observation)
                 </td>
                 <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                    <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+                <td>
                     <span></span>
                 </td>
             </tr>
