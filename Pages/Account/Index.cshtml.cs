@@ -1,13 +1,12 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SupermarketWEB.Data;
 using SupermarketWEB.Models;
+using System.Security.Principal;
 
-namespace SupermarketWEB.Pages.Products
+namespace SupermarketWEB.Pages.Account
 {
-    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly SupermarketContext _context;
@@ -15,11 +14,12 @@ namespace SupermarketWEB.Pages.Products
         {
             _context = context;
         }
-        public IList<Product> Products { get; set; }
+        public IList<User> Acounts { get; set; }
         public async Task OnGetAsync()
         {
             
-            Products = await _context.Products.ToListAsync();
+            
+            Acounts = await _context.Acounts.ToListAsync();
             
         }
     }

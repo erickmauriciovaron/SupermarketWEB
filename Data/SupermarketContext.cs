@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using SupermarketWEB.Models;
+using System.Security.Principal;
 
 namespace SupermarketWEB.Data
 {
@@ -8,7 +10,7 @@ namespace SupermarketWEB.Data
         public SupermarketContext(DbContextOptions options) : base(options) 
         {
         }
-
+        public DbSet<User> Acounts { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<PayMode> PayModes { get; set; }

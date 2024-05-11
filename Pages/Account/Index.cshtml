@@ -1,0 +1,38 @@
+﻿@page
+@model SupermarketWEB.Pages.Account.IndexModel
+@{
+    ViewData["Title"] = "Index Users";
+}
+<h1>Index Users</h1>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Acounts[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acounts[0].Password)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Acounts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    <span></span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

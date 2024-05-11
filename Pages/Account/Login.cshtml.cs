@@ -9,23 +9,22 @@ namespace SupermarketWEB.Pages.Account
     public class LoginModel : PageModel
     {
         [BindProperty]
-        public User User { get; set; }
-
+        public User? User {  get; set; }
         public void OnGet()
         {
+            
         }
-
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid) return Page();
 
-            if (User.Email == "alejandromunozf005@gmail.com" && User.Password == "123456")
+            if (User.Email == "candelavalenciaj@gmail.com" && User.Password == "123456")
             {
                 var claims = new List<Claim>
-                {
+        {
                     new Claim(ClaimTypes.Name, "admin"),
                     new Claim(ClaimTypes.Email, User.Email),
-                };
+        };
 
                 var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace SupermarketWEB.Pages
 {
     [Authorize]
+    
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
