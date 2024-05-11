@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SupermarketWEB.Data;
 using SupermarketWEB.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SupermarketWEB.Pages.PayModes
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         
