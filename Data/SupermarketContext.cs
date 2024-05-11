@@ -7,9 +7,17 @@ namespace SupermarketWEB.Data
 {
     public class SupermarketContext: DbContext
     {
+        private User user;
+
         public SupermarketContext(DbContextOptions options) : base(options) 
         {
         }
+
+        public SupermarketContext(User user)
+        {
+            this.user = user;
+        }
+
         public DbSet<User> Acounts { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
